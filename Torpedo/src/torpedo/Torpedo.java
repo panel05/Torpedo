@@ -1,8 +1,19 @@
 package torpedo;
+
+import java.util.*;
+
 public class Torpedo {
+    private static int jatekTipp = 0;
+    private static String[] hajoHely = new String[7];
+    
+    private static Random r = new Random();
+
+    public static void hajoElhelyez() {
+        String hajoForma = "X";
+        for(int i = 0; i < hajoHely.length; i++) hajoHely[i] = " ";
+    }
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
-    
 }
