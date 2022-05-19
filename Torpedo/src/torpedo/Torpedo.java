@@ -23,17 +23,19 @@ public class Torpedo {
         else {
             for(int j = 1; j < 3; j++) hajoHely[randomElhelyez + j] = hajoForma;
         }
+        
     }
 
     // MAIN
     public static void main(String[] args) {
-        while(!jatekosNyert()) Jatek();
-        System.out.println("Próbálkozások száma: " + jatekTipp);
+        //while(!jatekosNyert()) 
+        Jatek();
+        
     }
     
     public static void Jatek() {
         hajoElhelyez();
-        for(int i = 0; i < hajoHely.length; i++) System.out.print(hajoHely[i]);
+        //for(int i = 0; i < hajoHely.length; i++) System.out.print(hajoHely[i]);
         TalaltE();
         System.out.println("Ennyi lépésből nyertél"+ jatekTipp);
     }
@@ -41,10 +43,12 @@ public class Torpedo {
     public static int jatekosTipp() {
         int tipp;
         Scanner sc = new Scanner(System.in);
+        System.out.println("_ _ _ _ _ _ _");
+        System.out.println("1 2 3 4 5 6 7");
         System.out.println("Kérek egy egész számot: ");
         tipp = sc.nextInt();
         while(!(tipp>=0 && tipp<=hajoHely.length)){
-            System.out.println("Kérek egy egész számot: ");
+            System.out.println("Kérek egy egész számot 1 és 7 között: ");
             tipp = sc.nextInt();
     }
         return tipp;
@@ -62,11 +66,11 @@ public class Torpedo {
       jatekTipp++;
     }
 
-    public static boolean jatekosNyert() {
-        int k = 0;
-        while(k < hajoHely.length && !hajoHely[k].equals("X")) k++;
-        boolean nyert = k < hajoHely.length;
-        return nyert;
-    }
+//    public static boolean jatekosNyert() {
+//        int k = 0;
+//        while(k < hajoHely.length && !hajoHely[k].equals("X")) k++;
+//        boolean nyert = k < hajoHely.length;
+//        return nyert;
+//    }
     
 }
