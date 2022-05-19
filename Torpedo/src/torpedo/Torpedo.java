@@ -27,7 +27,8 @@ public class Torpedo {
 
     // MAIN
     public static void main(String[] args) {
-        Jatek();
+        while(!jatekosNyert()) Jatek();
+        System.out.println("Próbálkozások száma: " + jatekTipp);
     }
     
     public static void Jatek() {
@@ -52,8 +53,15 @@ public class Torpedo {
           
       }else{
           System.out.println("Nem talált");
-      }
+        }
       jatekTipp++;
+    }
+
+    public static boolean jatekosNyert() {
+        int k = 0;
+        while(k < hajoHely.length && !hajoHely[k].equals("X")) k++;
+        boolean nyert = k < hajoHely.length;
+        return nyert;
     }
     
 }
