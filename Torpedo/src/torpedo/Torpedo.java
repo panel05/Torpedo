@@ -4,17 +4,22 @@ import java.util.*;
 
 public class Torpedo {
 
+    private static int jatekTipp = 0;
+    private static String[] hajoHely = new String[7];
     
+    private static Random r = new Random();
 
-    
+    public static void hajoElhelyez() {
+        String hajoForma = "X";
+        for(int i = 0; i < hajoHely.length; i++) hajoHely[i] = " ";
+    }
 
-    
-    private int jatekTipp = 0;
-    private String[] hajoHely;
+
     public static void main(String[] args) {
         Jatek();
         
     }
+
     
     
     public static void Jatek() {
@@ -29,4 +34,5 @@ public class Torpedo {
         return tipp;
     }
     
+
 }
