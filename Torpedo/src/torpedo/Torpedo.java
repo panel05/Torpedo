@@ -50,6 +50,10 @@ public class Torpedo {
         Scanner sc = new Scanner(System.in);
         System.out.println("Kérek egy egész számot: ");
         tipp = sc.nextInt();
+        while(!(tipp>=0 && tipp<=hajoHely.length)){
+            System.out.println("Kérek egy egész számot: ");
+            tipp = sc.nextInt();
+    }
         return tipp;
     }
 
