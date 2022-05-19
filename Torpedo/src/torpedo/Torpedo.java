@@ -10,10 +10,24 @@ public class Torpedo {
 
     public static void hajoElhelyez() {
         String hajoForma = "X";
-        for(int i = 0; i < hajoHely.length; i++) hajoHely[i] = " ";
+        for(int i = 0; i < hajoHely.length; i++) hajoHely[i] = "_";
+
+        int randomElhelyez = r.nextInt(hajoHely.length);
+        // int randomElhelyez = 5;
+        hajoHely[randomElhelyez] = hajoForma;
+
+        if(randomElhelyez == hajoHely.length - 1 || randomElhelyez == hajoHely.length - 2) {
+            for(int j = 1; j < 3; j++) hajoHely[randomElhelyez - j] = hajoForma;
+        }
+        else {
+            for(int j = 1; j < 3; j++) hajoHely[randomElhelyez + j] = hajoForma;
+        }
     }
 
     public static void main(String[] args) {
-        
+        hajoElhelyez();
+        for(int i = 0; i < hajoHely.length; i++) System.out.print(hajoHely[i]);
+
+
     }
 }
