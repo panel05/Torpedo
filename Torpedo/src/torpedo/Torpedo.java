@@ -25,21 +25,12 @@ public class Torpedo {
         }
     }
 
-
+    // MAIN
     public static void main(String[] args) {
-
         Jatek();
-
-
-
     }
-
-    
     
     public static void Jatek() {
-        jatekosTipp();
-        Jatek();
-
         hajoElhelyez();
         for(int i = 0; i < hajoHely.length; i++) System.out.print(hajoHely[i]);
         TalaltE();
@@ -55,8 +46,9 @@ public class Torpedo {
 
     public static void TalaltE() {
         int tipp = jatekosTipp();
-      if(hajoHely[tipp-1].equals("X")){
+      if(hajoHely[tipp - 1].equals("X")){
           System.out.println("Talált");
+          hajoHely[tipp - 1] = "_";
           
       }else{
           System.out.println("Nem talált");
@@ -64,5 +56,4 @@ public class Torpedo {
       jatekTipp++;
     }
     
-
 }
