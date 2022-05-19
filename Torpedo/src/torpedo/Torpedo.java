@@ -35,6 +35,7 @@ public class Torpedo {
         hajoElhelyez();
         for(int i = 0; i < hajoHely.length; i++) System.out.print(hajoHely[i]);
         TalaltE();
+        System.out.println("Ennyi lépésből nyertél"+ jatekTipp);
     }
     
     public static int jatekosTipp() {
